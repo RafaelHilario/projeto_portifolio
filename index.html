@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Rafael Barbosa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">Sobre Mim</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" data-aos="fade-up">
+            <h1>Rafael Barbosa</h1>
+            <p>Olá! Sou Rafael Barbosa, programador com experiência em backend, automação e ciência de dados. Minha paixão é resolver problemas através da tecnologia.</p>
+        </section>
+
+        <section id="projects" data-aos="fade-left">
+            <div class="projects-container">
+                <div class="projects-list">
+                    <h2>Principais Projetos</h2>
+                    <div class="project">
+                        <h3>1. Sistema Bancário Simples</h3>
+                        <p>App em Python com funcionalidades de depósito, saque e extrato.</p>
+                        <button class="more-btn" onclick="toggleDetails(this)">Mais</button>
+                        <p class="details hidden">Este programa é um sistema bancário simples, desenvolvido em Python, com três funcionalidades principais:
+
+                            Depósito: O usuário pode informar o valor do depósito, que será adicionado ao saldo e registrado no extrato. Valores inválidos (menores ou iguais a zero) não são permitidos.
+                        
+                            Saque: O sistema permite realizar saques com restrições:
+                                O valor não pode exceder o saldo disponível.
+                                Existe um limite máximo por saque (R$ 500,00 no exemplo).
+                                Há um número máximo de saques diários (3 no exemplo).
+                                O extrato registra cada saque realizado.
+                        
+                            Exibir Extrato: Mostra todas as movimentações realizadas (depósitos e saques) e o saldo atual. Caso não haja movimentações, exibe uma mensagem indicando que não foram feitas transações.
+                        
+                        O programa apresenta um menu interativo no terminal para o usuário escolher a operação desejada: depositar, sacar, consultar extrato ou sair. Ele é estruturado com funções para facilitar a manutenção e reutilização do código. Ao final, o sistema agradece ao usuário por utilizar o serviço.</p>
+                    </div>
+                    <div class="project">
+                        <h3>2. API com SQLITE</h3>
+                        <p>Api que utiliza o slqlite</p>
+                        <button class="more-btn" onclick="toggleDetails(this)">Mais</button>
+                        <p class="details hidden">Detalhes: Este projeto implementa uma API REST utilizando FastAPI com um banco de dados SQLite para gerenciar usuários. A aplicação oferece as seguintes funcionalidades:
+
+                            Criação de Usuários: Permite cadastrar novos usuários com os campos nome, e-mail e senha. Verifica se o e-mail já está cadastrado para evitar duplicidades.
+                        
+                            Listagem de Usuários: Retorna uma lista de todos os usuários cadastrados no banco de dados.
+                        
+                            Busca por ID: Permite buscar informações de um usuário específico pelo seu ID.
+                        
+                            Exclusão de Usuários: Remove um usuário do banco de dados com base no ID fornecido.
+                        
+                        O projeto utiliza SQLAlchemy para modelar o banco de dados e gerenciar operações, além de Pydantic para validação e formatação de dados. A dependência de sessão do banco é tratada com uma função geradora, garantindo o fechamento seguro das conexões. É uma solução simples, eficiente e extensível para gerenciamento de usuários.</p>
+                    </div>
+                    <div class="project">
+                        <h3>3. Automação Infomed para SoulMV</h3>
+                        <p>Projeto de automação com Robot Framework para agilizar a transferência de beneficiários.</p>
+                        <button class="more-btn" onclick="toggleDetails(this)">Mais</button>
+                        <p class="details hidden">Detalhes: Reduziu o tempo de trabalho manual através da automação.</p>
+                    </div>
+                </div>
+                <div class="photo-container">
+                    <h2>Sobre Mim</h2>
+                    <img src="sua-foto.jpg" alt="Foto de Rafael Barbosa" class="profile-photo">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" data-aos="fade-right">
+            <h2>Contatos</h2>
+            <ul>
+                <li>Email: rafael.barbosa@example.com</li>
+                <li>LinkedIn: <a href="https://linkedin.com/in/rafaelbarbosa" target="_blank">rafaelbarbosa</a></li>
+                <li>GitHub: <a href="https://github.com/rafaelbarbosa" target="_blank">github.com/rafaelbarbosa</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Rafael Barbosa. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+
+        function toggleDetails(button) {
+            const details = button.nextElementSibling;
+            if (details.classList.contains('hidden')) {
+                details.classList.remove('hidden');
+                button.textContent = 'Menos';
+            } else {
+                details.classList.add('hidden');
+                button.textContent = 'Mais';
+            }
+        }
+    </script>
+</body>
+</html>

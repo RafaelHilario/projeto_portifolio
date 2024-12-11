@@ -1,0 +1,141 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+header {
+    background-color: #1e1e2f;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #a29bfe;
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #a29bfe;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #1e1e2f;
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 90%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+.projects-list {
+    flex: 2;
+    margin-right: 2rem;
+}
+
+.project {
+    background-color: #2c2c3a;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project .details {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.project .details.hidden {
+    display: none;
+}
+
+.more-btn {
+    background-color: #a29bfe;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.more-btn:hover {
+    background-color: #6c5ce7;
+}
+
+.photo-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #2c2c3a;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.profile-photo {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 50%;
+    margin-top: 1rem;
+}
+
+footer {
+    background-color: #1e1e2f;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projects-list {
+        margin-right: 0;
+    }
+
+    .photo-container {
+        margin-top: 2rem;
+    }
+}
